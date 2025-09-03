@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the best hostels in Aspen, Colorado. Affordable accommodations for skiers, hikers, and outdoor enthusiasts in the heart of the Rocky Mountains.">
+  <title>Aspen Hostels | Affordable Mountain Accommodations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, ::before, ::after { box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .loading-spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #38a169;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #ffffff;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .hostel-card {
+      transition: all 0.3s ease;
+    }
+    .hostel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .btn-primary {
+      background: linear-gradient(to right, #38a169, #2f855a);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(to right, #2f855a, #276749);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-700 text-white p-4 md:p-6 shadow-md sticky top-0 z-10">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center mb-4 md:mb-0">
+        <i class="fas fa-mountain text-2xl mr-2"></i>
+        <h1 class="text-2xl font-bold">AspenHostels.com</h1>
+      </div>
+      <nav class="flex space-x-4 md:space-x-6">
+        <a href="#hostels" class="nav-link font-medium">Hostels</a>
+        <a href="#activities" class="nav-link font-medium">Activities</a>
+        <a href="#about" class="nav-link font-medium">About</a>
+        <a href="#contact" class="nav-link font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-[url('https://images.unsplash.com/photo-1519659528534-7fd733a4a0e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')] bg-cover bg-center h-[80vh] flex items-center justify-center text-white relative">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative z-10 bg-black bg-opacity-60 p-8 rounded-xl text-center max-w-3xl mx-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Mountain Adventures Start Here</h2>
+      <p class="text-lg md:text-xl mb-6">Affordable hostels in Aspen for skiers, hikers, and outdoor enthusiasts</p>
+      <a href="#hostels" class="btn-primary inline-block text-white font-bold py-3 px-8 rounded-lg shadow-md text-lg">Explore Hostels</a>
+    </div>
+  </section>
+
+  <!-- Top Hostels -->
+  <section id="hostels" class="py-16 container mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-4">Top Hostels in Aspen</h3>
+    <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">These highly-rated hostels offer the perfect base for your mountain adventures with easy access to slopes and trails.</p>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="hostel-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Aspen Alpine Lodge" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Aspen Alpine Lodge</h4>
+            <span class="bg-green-100 text-green-800 text-sm font-semibold px-2.5 py-0.5 rounded">4.7/5</span>
+          </div>
+          <p class="text-gray-600 mt-2 mb-4">Ski-in/ski-out access with cozy common areas and equipment storage.</p>
+          <div class="flex items-center text-gray-500 mb-3">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>321 Mountain St, Aspen</span>
+          </div>
+          <div class="flex items-center text-gray-500 mb-4">
+            <i class="fas fa-skiing-nordic mr-2"></i>
+            <span>5 min to Aspen Mountain</span>
+          </div>
+          <div class="mt-4">
+            <a href="#" class="btn-primary inline-block text-white font-bold py-2 px-4 rounded-lg text-sm">View Availability</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hostel-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1752&q=80" alt="Mountain Base Hostel" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Mountain Base Hostel</h4>
+            <span class="bg-green-100 text-green-800 text-sm font-semibold px-2.5 py-0.5 rounded">4.5/5</span>
+          </div>
+          <p class="text-gray-600 mt-2 mb-4">Budget-friendly option with free shuttle to all four mountains.</p>
+          <div class="flex items-center text-gray-500 mb-3">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>654 Base Camp Rd, Aspen</span>
+          </div>
+          <div class="flex items-center text-gray-500 mb-4">
+            <i class="fas fa-shuttle-van mr-2"></i>
+            <span>Free shuttle service</span>
+          </div>
+          <div class="mt-4">
+            <a href="#" class="btn-primary inline-block text-white font-bold py-2 px-4 rounded-lg text-sm">View Availability</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hostel-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Adventure Hub Hostel" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-xl font-bold">Adventure Hub Hostel</h4>
+            <span class="bg-green-100 text-green-800 text-sm font-semibold px-2.5 py-0.5 rounded">4.8/5</span>
+          </div>
+          <p class="text-gray-600 mt-2 mb-4">Social hostel with guided hikes, gear rentals, and adventure planning.</p>
+          <div class="flex items-center text-gray-500 mb-3">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>987 Adventure Ln, Aspen</span>
+          </div>
+          <div class="flex items-center text-gray-500 mb-4">
+            <i class="fas fa-hiking mr-2"></i>
+            <span>Guided tours available</span>
+          </div>
+          <div class="mt-4">
+            <a href="#" class="btn-primary inline-block text-white font-bold py-2 px-4 rounded-lg text-sm">View Availability</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-4">Aspen Adventures</h3>
+      <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Experience the best of the Rocky Mountains with these incredible activities</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 text-center shadow-md">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-skiing text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Skiing & Snowboarding</h4>
+          <p class="text-gray-600 text-sm">World-class slopes across four mountains</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 text-center shadow-md">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-hiking text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Hiking</h4>
+          <p class="text-gray-600 text-sm">Spectacular trails for all skill levels</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 text-center shadow-md">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-bicycle text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Mountain Biking</h4>
+          <p class="text-gray-600 text-sm">Challenging terrain and beautiful views</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 text-center shadow-md">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-water text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Whitewater Rafting</h4>
+          <p class="text-gray-600 text-sm">Thrilling rapids on the Roaring Fork River</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hostels List -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-4">More Aspen Hostels</h3>
+      <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Discover all our recommended budget accommodations in Aspen</p>
+      
+      <div class="flex justify-center mb-8">
+        <div class="relative w-full max-w-2xl">
+          <input type="text" id="hostel-search" placeholder="Search hostels by name or amenities..." class="w-full p-4 pl-12 rounded-lg border-2 border-gray-300 focus:border-green-400 focus:outline-none shadow-sm">
+          <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+      </div>
+      
+      <div id="search-results" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-center py-10">
+          <div class="loading-spinner"></div>
+          <p class="mt-4 text-gray-600">Finding hostels in Aspen...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 px-6 bg-gray-100">
+    <div class="container mx-auto max-w-4xl">
+      <h3 class="text-3xl font-bold text-center mb-6">Why Choose Hostels in Aspen?</h3>
+      <p class="text-lg text-gray-700 mb-8 text-center">
+        Aspen is world-renowned for its stunning mountain scenery and exceptional outdoor activities. Hostels provide an affordable way to experience this luxury destination while meeting fellow adventure enthusiasts.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-dollar-sign text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Budget-Friendly</h4>
+          <p class="text-gray-600">Save on accommodation to spend more on lift tickets, gear rentals, and experiences.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-users text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Adventure Community</h4>
+          <p class="text-gray-600">Connect with fellow skiers, hikers, and outdoor enthusiasts from around the world.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-map-marker-alt text-2xl text-green-600"></i>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Prime Locations</h4>
+          <p class="text-gray-600">Most hostels are conveniently located near slopes, trails, and downtown Aspen.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-white p-8 rounded-2xl shadow-md">
+        <h4 class="text-2xl font-bold text-center mb-6">Aspen Mountain Information</h4>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h5 class="text-xl font-semibold mb-3 text-green-700">Winter Season</h5>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center"><i class="fas fa-snowflake mr-2 text-green-500"></i> Ski season: November - April</li>
+              <li class="flex items-center"><i class="fas fa-mountain mr-2 text-green-500"></i> 4 mountains: Aspen, Snowmass, Highlands, Buttermilk</li>
+              <li class="flex items-center"><i class="fas fa-lift mr-2 text-green-500"></i> 5,500+ acres of skiable terrain</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-xl font-semibold mb-3 text-green-700">Summer Season</h5>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center"><i class="fas fa-hiking mr-2 text-green-500"></i> Hiking & mountain biking trails</li>
+              <li class="flex items-center"><i class="fas fa-music mr-2 text-green-500"></i> Aspen Music Festival & events</li>
+              <li class="flex items-center"><i class="fas fa-tree mr-2 text-green-500"></i> White River National Forest access</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 container mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+    <p class="text-gray-700 mb-8 max-w-2xl mx-auto">Have questions about hostels in Aspen or need help planning your trip? Reach out to our local experts!</p>
+    <form action="https://formspree.io/f/xblapddk" method="POST" class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg grid gap-4">
+      <input type="text" name="name" placeholder="Your Name" required class="border-2 border-gray-300 rounded-lg p-3 w-full focus:border-green-400 focus:outline-none">
+      <input type="email" name="email" placeholder="Your Email" required class="border-2 border-gray-300 rounded-lg p-3 w-full focus:border-green-400 focus:outline-none">
+      <textarea name="message" placeholder="Your Message" required class="border-2 border-gray-300 rounded-lg p-3 w-full h-32 focus:border-green-400 focus:outline-none"></textarea>
+      <button type="submit" class="btn-primary text-white font-bold py-3 rounded-lg shadow-md">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-6">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <i class="fas fa-mountain text-2xl mr-2 text-green-400"></i>
+            <h4 class="text-xl font-bold">AspenHostels.com</h4>
+          </div>
+          <p class="text-gray-400">Your guide to affordable mountain accommodations in Aspen, Colorado.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#hostels" class="text-gray-400 hover:text-white">Hostels</a></li>
+            <li><a href="#activities" class="text-gray-400 hover:text-white">Activities</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white">About Aspen</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Aspen Mountains</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Aspen Mountain</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Snowmass</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Aspen Highlands</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Buttermilk</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+          <div class="mt-4">
+            <p class="text-gray-400">Email: info@aspenhostels.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+        <p>© 2025 AspenHostels.com | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Script -->
+  <script>
+    // Hostel data for Aspen
+    const hostelData = [
+      {
+        name: "Aspen Alpine Lodge",
+        address: "321 Mountain St, Aspen, CO 81611",
+        description: "Ski-in/ski-out access with cozy common areas and equipment storage.",
+        rating: 4.7,
+        website: "#",
+        lat: 39.1911,
+        lon: -106.8175
+      },
+      {
+        name: "Mountain Base Hostel",
+        address: "654 Base Camp Rd, Aspen, CO 81611",
+        description: "Budget-friendly option with free shuttle to all four mountains.",
+        rating: 4.5,
+        website: "#",
+        lat: 39.1888,
+        lon: -106.8202
+      },
+      {
+        name: "Adventure Hub Hostel",
+        address: "987 Adventure Ln, Aspen, CO 81611",
+        description: "Social hostel with guided hikes, gear rentals, and adventure planning.",
+        rating: 4.8,
+        website: "#",
+        lat: 39.1923,
+        lon: -106.8247
+      },
+      {
+        name: "Snowmass Lodge",
+        address: "123 Snowmass Way, Aspen, CO 81615",
+        description: "Located at the base of Snowmass Mountain with ski rental equipment.",
+        rating: 4.6,
+        website: "#",
+        lat: 39.2130,
+        lon: -106.9379
+      },
+      {
+        name: "Highlands Hostel",
+        address: "456 Highlands Dr, Aspen, CO 81611",
+        description: "Quiet hostel near Aspen Highlands with amazing mountain views.",
+        rating: 4.4,
+        website: "#",
+        lat: 39.1822,
+        lon: -106.8554
+      },
+      {
+        name: "Buttermilk Bunkhouse",
+        address: "789 Buttermilk Rd, Aspen, CO 81611",
+        description: "Perfect for beginners and families near the gentle slopes of Buttermilk.",
+        rating: 4.3,
+        website: "#",
+        lat: 39.2053,
+        lon: -106.8603
+      },
+      {
+        name: "Aspen Downtown Hostel",
+        address: "101 Main St, Aspen, CO 81611",
+        description: "Central location with walking distance to restaurants and shops.",
+        rating: 4.5,
+        website: "#",
+        lat: 39.1910,
+        lon: -106.8173
+      },
+      {
+        name: "Mountain View Hostel",
+        address: "202 Viewpoint Dr, Aspen, CO 81611",
+        description: "Panoramic mountain views with outdoor hot tub and fire pit.",
+        rating: 4.7,
+        website: "#",
+        lat: 39.2015,
+        lon: -106.8342
+      },
+      {
+        name: "Roaring Fork Hostel",
+        address: "303 River Rd, Aspen, CO 81611",
+        description: "Riverside location with easy access to fishing and rafting.",
+        rating: 4.2,
+        website: "#",
+        lat: 39.1967,
+        lon: -106.8369
+      },
+      {
+        name: "Aspen Summit Hostel",
+        address: "404 Summit Blvd, Aspen, CO 81611",
+        description: "Highest elevation hostel in Aspen with stunning views.",
+        rating: 4.9,
+        website: "#",
+        lat: 39.2234,
+        lon: -106.8456
+      }
+    ];
+
+    async function searchHostels() {
+      const resultsDiv = document.getElementById("search-results");
+      resultsDiv.innerHTML = `
+        <div class="text-center py-10 col-span-3">
+          <div class="loading-spinner"></div>
+          <p class="mt-4 text-gray-600">Finding hostels in Aspen...</p>
+        </div>
+      `;
+
+      try {
+        // Simulate API delay
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        resultsDiv.innerHTML = "";
+        
+        if (hostelData.length === 0) {
+          resultsDiv.innerHTML = "<p class='col-span-3 text-center text-gray-600 py-10'>No hostels found. Please try a different search.</p>";
+          return;
+        }
+
+        hostelData.forEach(h => {
+          const card = document.createElement("div");
+          card.className = "hostel-card bg-white rounded-xl shadow-md overflow-hidden";
+          card.innerHTML = `
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h4 class="text-lg font-bold">${h.name}</h4>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">${h.rating}/5</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-3">${h.description}</p>
+              <div class="flex items-center text-gray-500 text-xs mb-2">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                <span>${h.address.split(',')[0]}</span>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <a href="${h.website}" target="_blank" class="text-green-600 hover:text-green-700 text-sm font-medium">
+                  View Availability →
+                </a>
+                <a href="https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lon}#map=17/${h.lat}/${h.lon}" 
+                   target="_blank" 
+                   class="text-gray-500 hover:text-gray-700 text-sm">
+                  View Map
+                </a>
+              </div>
+            </div>
+          `;
+          resultsDiv.appendChild(card);
+        });
+      } catch (err) {
+        resultsDiv.innerHTML = `
+          <div class="col-span-3 text-center py-10">
+            <i class="fas fa-exclamation-triangle text-red-400 text-4xl mb-3"></i>
+            <p class="text-red-500 font-medium">Error fetching hostels.</p>
+            <p class="text-gray-600 mt-2">Please try again later.</p>
+          </div>
+        `;
+        console.error(err);
+      }
+    }
+
+    // Search functionality
+    document.getElementById('hostel-search').addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const filteredHostels = hostelData.filter(hostel => 
+        hostel.name.toLowerCase().includes(searchTerm) || 
+        hostel.address.toLowerCase().includes(searchTerm) ||
+        hostel.description.toLowerCase().includes(searchTerm)
+      );
+      
+      displayHostels(filteredHostels);
+    });
+
+    function displayHostels(hostels) {
+      const resultsDiv = document.getElementById("search-results");
+      resultsDiv.innerHTML = "";
+      
+      if (hostels.length === 0) {
+        resultsDiv.innerHTML = "<p class='col-span-3 text-center text-gray-600 py-10'>No hostels found. Please try a different search.</p>";
+        return;
+      }
+
+      hostels.forEach(h => {
+        const card = document.createElement("div");
+        card.className = "hostel-card bg-white rounded-xl shadow-md overflow-hidden";
+        card.innerHTML = `
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="text-lg font-bold">${h.name}</h4>
+              <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">${h.rating}/5</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">${h.description}</p>
+            <div class="flex items-center text-gray-500 text-xs mb-2">
+              <i class="fas fa-map-marker-alt mr-1"></i>
+              <span>${h.address.split(',')[0]}</span>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <a href="${h.website}" target="_blank" class="text-green-600 hover:text-green-700 text-sm font-medium">
+                View Availability →
+              </a>
+              <a href="https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lon}#map=17/${h.lat}/${h.lon}" 
+                 target="_blank" 
+                 class="text-gray-500 hover:text-gray-700 text-sm">
+                View Map
+              </a>
+            </div>
+          </div>
+        `;
+        resultsDiv.appendChild(card);
+      });
+    }
+
+    window.onload = () => {
+      searchHostels();
+    };
+  </script>
+</body>
+</html>
